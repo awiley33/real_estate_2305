@@ -24,5 +24,20 @@ class House
             |room| room.category == category }
     end
 
+    def area
+        areas_array = []
+        @rooms.each do |room|
+            areas_array << room.area
+        end
+        areas_array.sum
+    end
+
+    def details
+        {
+            "price" => price,
+            "address" => address
+        }
+    end
+
 
 end
