@@ -14,11 +14,11 @@ RSpec.describe Room do
     end
 
     it "can get area" do
-      room1 = Room.new(:bedroom, 10, '13')
-      room2 = Room.new(:living_room, 15, '12')
+      room_1 = Room.new(:bedroom, 10, '13')
+      room_2 = Room.new(:living_room, 15, '12')
 
-      expect(room1.area).to eq(130)
-      expect(room2.area).to eq(180)
+      expect(room_1.area).to eq(130)
+      expect(room_2.area).to eq(180)
     end
 
     it "can is unpainted by default" do
