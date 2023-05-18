@@ -47,5 +47,18 @@ RSpec.describe do
         expect(@house.rooms_from_category(:basement)).to eq([@room_4])
     end
 
+    it "can find the area" do
+        @house.add_room(@room_1)
+        @house.add_room(@room_2)
+        @house.add_room(@room_3)
+        @house.add_room(@room_4)
+
+        expect(@house.area).to eq(1900)
+    end
+
+    it "can return details to a hash" do
+
+        expect(@house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+    end
 
 end
